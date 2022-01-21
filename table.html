@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="myjava.js"></script>
+    <title>Document</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+     <label for="">firstname :</label>   <input type="text" value="" id="firstname" />
+     <label for="">lastname :</label>  <input type="text" value="" id="lastname" />
+     <label for="">age :</label>   <input type="text" value="" id="age" />
+
+
+
+        <input type="button" value="Add" id="btnAdd" onclick="btnAddClick()">
+        <input type="button" value="delete" id="btndelete" onclick="deleteSelectedStudent()">
+        <input type="button" value="Ok" id="btnOk" onclick="btnOkClick()" disabled="true">
+        <input type="button" value="Cancel" id="btnCancel" onclick="btnCancelClick()" disabled="true">
+        <hr/>
+
+
+
+        <div>
+            <table>
+                <thead>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>edit</th>
+                    <th> invent selection: <input type="checkbox" onchange="invertselection(this.checked)" name="check" value="invert selection"></th>
+                </thead>
+                <tbody id="pnlStudents">
+                </tbody>
+
+            </table>
+
+        </div>
+    </form>
+</body>
+
+</html>
